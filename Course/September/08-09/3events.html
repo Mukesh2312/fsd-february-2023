@@ -1,17 +1,53 @@
 <html>
     <head>
-
     </head>
     <body>
-        <button onclick="display()">Click here</button>
+        <input type="text" id="fullName" name="fullNameDetails" onchange="onChangeHandler(event)">
+        <input type="checkbox" id="selection" onchange="onChangeHandler(event)">
+        <button onclick="display()" id="button-submit" disabled>Click here</button>
         <div id="demo"></div>
     </body>
     <script>
+         var fullName = false;
+         var selection = false;
         function display(){
              document.getElementById('demo').style.width = "200px";
              document.getElementById('demo').style.height = "200px";
              document.getElementById('demo').style.border = "2px solid red";
         }
-        
+        function onChangeHandler(event){
+            if(event.target.id == "fullName"){
+                if(event.target.value){
+                    fullName = true;
+                }
+                else{
+                   fullName = false;
+                }     
+            }
+            if(event.target.id == "selection"){
+                if(event.target.checked){
+                    selection = true;
+                }else{
+                    selection = false;
+                }    
+            }
+            if(fullName && selection){
+                document.getElementById('button-submit').disabled = false;
+            }
+            else{
+                document.getElementById('button-submit').disabled = true;
+            }
+            
+        }
+        //we can use onclick inside the button,icon,image,label
+        //only for input tag please use onchange event
+
+        //button - onclick
+        //input - onchange
+        //onchange-event object - event.target.value
+
+        // function onSelectionHandler(event){
+        //    console.log(event.target.checked);
+        // }
     </script>
 </html>

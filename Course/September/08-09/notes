@@ -4,3 +4,27 @@ New version is bootstrap 5
 mt - margin-top 
 mb - margin-bottom
 d-flex justify-content-center - flex in center 
+Events:
+1.onclick 
+    //button,icons,image,label 
+2.onchange 
+    //input tag 
+Every events will have event object 
+//Inside the event object event.target
+//Inside the event.target 
+                1.id 
+                2.name 
+                3.value 
+Attribute disabled 
+Inside the javascript we can make button enable or disable by using boolean property 
+disabled = true --> button will be disabled
+disabled = false --> button will be enable
+===========================================================
+Naming function for events.
+//Inside the javascript will have multiple function for different purpose.
+//Function which is written particular for events we can use handler keyword at the end of function name.
+============================================
+Getting checkbox value 
+event.target.checked --> true or false 
+//it will return true if checkbox is checked otherwise false
+====================================

@@ -1,0 +1,51 @@
+<!-- <script>
+    var list=[{
+        name:"lokesh",
+        city:'bangalore'
+    },{
+        name:'prakash',
+        city:'kochi'
+    },{
+        name:'salman',
+        city:'delhi'
+    },{
+        name:'durgesh',
+        city:'Delhi'
+    },{
+        name:'amol',
+        city:'deltion'
+    }];
+    var finalResult = list.filter(function(obj){
+        return obj.city.toLowerCase().includes('del');
+    }).map(function(obj){
+         return obj.name;
+    })
+    console.log(finalResult);
+</script> -->
+
+<!-- <script>
+    //find data divisible by 5 and return following output in below format:
+    //[{index:1,value:50},{index:2,value:60}];
+    var list =[33,40,50,80,90,22];
+    var result = list.filter(function(obj){
+          return obj%5==0;
+    }).map(function(obj,index){
+         return {index:index,value:obj}
+    });
+    console.log(result);
+
+</script> -->
+
+
+<script>
+    //find data divisible by 5 and return following output in below format:
+    //[{index:1,value:50},{index:2,value:60}];
+    var list =[33,40,50,80,90,22];
+    var result = list.map(function(obj,index){
+            return {index:index,value:obj};
+    }).filter(function(obj){
+          return obj.value%5==0;
+    })
+    console.log(result);
+
+</script>
