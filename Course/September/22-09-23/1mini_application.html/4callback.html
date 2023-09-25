@@ -1,0 +1,16 @@
+<script>
+    function display(duration,callback){
+        console.log("display function",duration);
+        callback("akash",33);
+    }
+    function addition(fullName,age){
+        console.log("addition",fullName,age);
+    }
+
+    function subtraction(fullName,age){
+        console.log("subtraction",fullName,age);
+    }
+    display(2000,addition);
+    display(5000,subtraction);
+
+</script>
