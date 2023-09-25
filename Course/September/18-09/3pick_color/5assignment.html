@@ -1,4 +1,46 @@
 https://my.newtonschool.co/playground/markup/4a4m56fy91l8
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .palette {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .color {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    .color[data-hex="#FF5733"] {
+        background-color: #FF5733;
+    }
+
+    .color[data-hex="#33FF57"] {
+        background-color: #33FF57;
+    }
+
+    .color[data-hex="#5733FF"] {
+        background-color: #5733FF;
+    }
+
+    #displayArea {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    #hexValue {
+        font-size: 20px;
+    }
+</style>
+
 <body>
     <div class="palette">
         <div class="color" data-hex="#FF5733"></div>
@@ -10,59 +52,18 @@ https://my.newtonschool.co/playground/markup/4a4m56fy91l8
     </div>
 </body>
 
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
 
-.palette {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.color {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.color[data-hex="#FF5733"] {
-    background-color: #FF5733;
-}
-
-.color[data-hex="#33FF57"] {
-    background-color: #33FF57;
-}
-
-.color[data-hex="#5733FF"] {
-    background-color: #5733FF;
-}
-
-#displayArea {
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid black;
-}
-
-#hexValue {
-    font-size: 20px;
-}
-
-</style>
 
 <script>
     const colors = document.querySelectorAll('.color');
     const displayArea = document.getElementById('displayArea');
     const hexValue = document.getElementById('hexValue');
-    colors.forEach(function(obj){
-          obj.addEventListener('click',function(){
-                  let hex = this.getAttribute('data-hex');
-                  hexValue.textContent = `Hex Value: ${hex}`;
-                  displayArea.style.backgroundColor = hex;
-          })
+    colors.forEach(function (obj) {
+        obj.addEventListener('click', function () {
+            let hex = this.getAttribute('data-hex');
+            //   hexValue.textContent = `Hex Value: ${hex}`;
+            displayArea.style.backgroundColor = hex;
+        })
     })
 
 </script>
