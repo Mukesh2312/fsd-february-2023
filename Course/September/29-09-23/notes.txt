@@ -8,6 +8,25 @@ How to see localStorage data in your browser
 example syntax:
 localStorage.setItem("fullName","akash");
 localStorage.getItem("fullName");
+===========================================
+JSON
+//JAVASCRIPT OBJECT NOTATION 
+//It will convert object into string 
+JSON.stringify()
+//It will convert object into string 
+JSON.parse()
+//It will convert string into object 
+========================================
+const
+//Whenever we have object or array we can go with constant 
+//if you add or remove or read, or delete data in object or array it will allow you to do so.
+example:
+const arrayList =[2,3];
+arrayList.push(44);
+arrayList.splice(0,1);
+arrayList = "akash"; ---> not allowed
+=====================================
+
 
 
 
