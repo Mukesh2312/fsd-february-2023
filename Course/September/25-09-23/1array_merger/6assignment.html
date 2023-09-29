@@ -32,6 +32,7 @@ https://my.newtonschool.co/playground/markup/tvhh8npow2gc
     const firstArray = [];
     const secondArray = [];
 
+<<<<<<< HEAD
     // <<<<<<< HEAD
     btn1.addEventListener('click', () => {
         console.log(arr1.value);
@@ -46,9 +47,32 @@ https://my.newtonschool.co/playground/markup/tvhh8npow2gc
             firstArray.push(Number(obj));
         }
         //["22","33","44"] -->[22,33,44]
+=======
+btn1.addEventListener('click', () => {
+  
+   let strList = arr1.value.split(',');
+    //"22,33,44"  --> ["22","33","44"];
+   let checkStatus = false;
+   for(let obj of strList){
+     if(isNaN(obj)){
+        checkStatus = true;
+        break;
+     }
+    firstArray.push(Number(obj));
+   }
+   //["22","33","44"] -->[22,33,44]
+
+  if(checkStatus){
+    document.getElementById("error").classList.remove('d-none');
+  }else{
+    document.getElementById("disp-1").innerHTML = JSON.stringify(firstArray);
+  }
+  
+>>>>>>> 80c0c097fcc1bf20d73a98ba87741139d89b0238
 
         document.getElementById("disp-1").innerHTML = JSON.stringify(firstArray);
 
+<<<<<<< HEAD
     })
 >>>>>>> 766eadc624acce18ffa6db624bbc77fc7b194874
 
@@ -57,4 +81,31 @@ https://my.newtonschool.co/playground/markup/tvhh8npow2gc
 
     document.getElementById('merge').addEventListener('click', () => {
     })
+=======
+btn2.addEventListener('click', () => {
+
+    let strList = arr2.value.split(',');
+    //"22,33,44"  --> ["22","33","44"];
+    let checkStatus = false;
+   for(let obj of strList){
+    if(isNaN(obj)){
+        checkStatus = true;
+        break;
+     }
+    secondArray.push(Number(obj));
+   }
+   //["22","33","44"] -->[22,33,44]
+   if(checkStatus){
+    document.getElementById("error").classList.remove('d-none');
+  }else{
+    document.getElementById("disp-2").innerHTML = JSON.stringify(secondArray);
+  }
+  
+})
+
+document.getElementById('merge').addEventListener('click', () => {
+    let mergeArray = [...firstArray,...secondArray];
+    document.getElementById("result").innerHTML = JSON.stringify(mergeArray);
+})
+>>>>>>> 80c0c097fcc1bf20d73a98ba87741139d89b0238
 </script>
