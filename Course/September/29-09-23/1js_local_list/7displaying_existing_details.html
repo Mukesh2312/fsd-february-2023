@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <ul id="demo">
+          
+        </ul>
+        
+        <script>
+            const arrayList =["pen","pencil","eraser"];
+            function add(){
+             const main = document.getElementById("demo");
+             for(let obj of arrayList){
+                main.innerHTML+=`<li>${obj}</li>`;
+             }
+           
+            }
+            add();
+        </script>
+    </body>
+</html>
