@@ -1,0 +1,23 @@
+Constructor Function:
+//Constructor function is use to create unique object.
+//Constructor is used to initialize the data.
+//function,array,object everthing is object in javascript.
+//Function name will be in capital letter for constructor function.
+
+Writing Method inside the object?
+//method is also function in javascript.
+//If you write the function outside the object that is called function.
+//If you write the function inside the object that is called method.
+
+Date in Javascript:
+//To display date inside the javascript we have inbuild Date Object 
+example:
+let date = new Date();
+console.log(date)//date object 
+//We need to convert date object to string we need use inbuild method called toDateString();
+example:
+let date = new Date();
+console.log(date.toDateString())//date string 
+//If we need to pass your own date 
+example:
+let date = new Date("2022-08-34");

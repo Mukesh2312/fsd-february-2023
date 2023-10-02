@@ -1,0 +1,25 @@
+https://my.newtonschool.co/playground/code/brk1q62wrpof?lecture_hash=ymgn4t4bdfpl
+<script>
+    function Appointment(aptDate) {
+       this.date = new Date(aptDate);
+       this.location = "";
+       
+       this.setLocation = function(a){
+        this.location = a;
+       }
+
+       this.getLocation = function(){
+        return this.location;
+       }
+
+       this.toString = function(){
+        return `Appointment on ${this.date.toDateString()} at ${this.location}`;
+       }
+
+   }
+
+   let obj = new Appointment("2022-12-25");
+   obj.setLocation("chennai");
+   console.log(obj.toString());
+   console.log(typeof obj.date.toDateString());
+</script>
