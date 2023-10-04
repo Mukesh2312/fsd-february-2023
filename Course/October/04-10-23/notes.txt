@@ -1,0 +1,41 @@
+this:
+This refer to object
+It will refer to current object
+Outside the function it will refer to window object
+If inside the object or inside the function it will refer to current object
+========================================================
+Constructor Function 
+//It is similar to class concept 
+//It will create blueprint of object 
+//we can able to create multiple objects of similar types.
+=======================================
+Encapsulation:
+//It helps to protect data from outside world.
+//Before updating data we can check the correct data is available then only we can update it.
+//we can proper data in our application.
+================================
+Bind:
+//An object can borrow a method from another object.
+example:
+let employee={
+        firstName:"akash",
+        age:45,
+        getFullName:function(lastName){
+            console.log(this.firstName,this.age,lastName);
+        }
+     }
+     employee.getFullName("ramesh");
+
+     let person={
+        firstName:"suresh",
+        age:33
+     }
+     employee.getFullName.bind(person,"rahul")();
+=======================================================
+Private Variable inside Javascript?
+//We can create private variable inside the Constructor function. 
+//Anything is attached with this keyword inside the Constructor function  will become public.
+//If we declare local variable with let or const or var inside the Constructor function it will become Private
+//local variable we cannot access outside the Constructor function.
+//To access local variable or private variable outside we need to use get method to return private variable.
+==========================================================================
