@@ -5,9 +5,13 @@
        //private method
        const display = function(){
         console.log("display function");
-       }   
+       }  
+       
+       this.publicDetails = function(){
+         return display();
+       }
     }
 
     let akashPerson = new Person("akash");
-    //akashPerson.display();
+    akashPerson.publicDetails();
 </script>

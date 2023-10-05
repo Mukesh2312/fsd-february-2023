@@ -1,0 +1,37 @@
+https://my.newtonschool.co/playground/code/eyhxscokyv5j?lecture_hash=ymgn4t4bdfpl
+<script>
+    function Product(name,price,manufacturer){
+      this.name = name;
+      this.price = price;
+      this.manufacturer = manufacturer;
+
+      let tax;
+
+      this.getProductDetails = function(){
+        return `Name: ${this.name}, Price: ${this.price}, Manufacturer: ${this.manufacturer}`;
+      }
+
+      this.setTax = function(amount){
+          tax = amount; 
+      }
+
+      this.getTax = function(){
+          return tax;
+      }
+
+      const calculateTotalPrice = function(){
+        return this.price + this.price*(tax/100);
+      }
+
+      this.getTotalPrice = function(){
+         return calculateTotalPrice.bind(this)();
+      }
+
+      this.deleteMethod = function(methodName){
+          delete this[methodName];
+      }
+
+
+    }
+    let obj = new Person("");
+</script>
