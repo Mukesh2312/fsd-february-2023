@@ -1,0 +1,33 @@
+<script>
+    function Person(name) {
+        let fullName = name;  //private variable 
+
+        //encapsulation
+        this.setName = function (name) {
+            fullName = name
+        }
+
+        //encapsulation
+        this.getName = function () {
+            return fullName
+        }
+        
+        //private method //abstraction
+        const getDetails = function () {
+            console.log(`The fullname is ${fullName}`);
+        }
+
+        this.getDisplay = function () {
+            getDetails();
+        }
+
+
+    }
+
+
+
+    let akashPerson = new Person("");
+    akashPerson.setName("rakesh");
+    // console.log(akashPerson.getName());
+    akashPerson.getDisplay();
+</script>
