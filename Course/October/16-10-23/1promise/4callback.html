@@ -1,0 +1,65 @@
+<!-- <script>
+    function GpayScan(input){
+        setTimeout(function(){
+            console.log("you are paying this ",input);
+        },3000)
+       
+    }
+
+    function checkingMyBankBalance(){
+        setTimeout(function(){
+            console.log("it will return yes or no");
+        },1000)
+         
+    }
+
+    function sendingAmountToSenderBank(input){
+        setTimeout(function(){
+            console.log("finally amount is received",input);
+        },2000)   
+    }
+
+   
+    GpayScan(300);
+    checkingMyBankBalance();
+    sendingAmountToSenderBank(300);
+
+</script> -->
+
+<script>
+    function GpayScan(amount,callback){
+        setTimeout(function(){
+            console.log("Gpay Scan",amount);
+            callback(amount);
+        },3000)
+       
+    }
+
+    function checkingMyBankBalance(amount){
+        setTimeout(function(){
+            //true or false realtime data
+            let balance = 3000;
+            if(balance-amount>0){
+                console.log("Existing Balance is available to proceed");
+            }
+            else{
+                console.log("amount is not available");
+            }    
+        },1000)
+         
+    }
+
+    function sendingAmountToSenderBank(input){
+        setTimeout(function(){
+            console.log("Final amount",input);
+        },2000)   
+    }
+
+   
+    GpayScan(300,(amount)=>{
+        checkingMyBankBalance(amount);
+    });
+    
+    // sendingAmountToSenderBank(300);
+
+</script>

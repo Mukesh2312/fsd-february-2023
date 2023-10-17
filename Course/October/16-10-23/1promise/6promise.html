@@ -1,0 +1,34 @@
+<script>
+    function GpayScan(amount) {
+        return new Promise((resolve) => {
+            setTimeout(function () {
+                resolve(amount);
+            }, 3000)
+        })
+    }
+
+    function checkingMyBankBalance(amount) {
+        return new Promise((resolve) => {
+            setTimeout(function () {
+                //true or false realtime data
+                let balance = 3000;
+                if (balance - amount > 0) {
+                    console.log("Existing Balance is available to proceed");
+                    resolve(amount);
+                }
+                else {
+                    console.log("amount is not available");
+                }
+            }, 1000)
+        })
+
+
+    }
+
+    GpayScan(300).then((res) => {
+        console.log("Gpay is successfull", res);
+       return checkingMyBankBalance(res);
+    }).then((output)=>{
+        console.log("existing balance is completed",output);
+    })
+</script>
