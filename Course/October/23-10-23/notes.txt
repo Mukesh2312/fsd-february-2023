@@ -1,0 +1,31 @@
+Fetch Method:
+//It is use to access data from the network call
+//It is written in form of promise 
+//By using then block we can access the data.
+//API - Application programming interface
+//RESTAPI - Representation state Transfer. (json)
+example:
+fetch(url).then()
+============================================
+Javascript runtime Engine:
+//compiler name for javascript in chrome is v8 engine.
+1.heap 
+//it will store object and array
+2.call stack 
+//code execution will happen inside the call stack
+3.web api 
+//Inbuilt methods are store here 
+example:DOM methods,setTimeout,setInterval,fetch
+4.event loop 
+//Manager --> 24 * 7 
+//To process the data 
+//It will bring back data from callback queue to stack 
+//any async code is there in call stack first it will push inside the callback queue. 
+first it will complete all synchronous code and again it will bring back async code inside the call stack.
+5.callback queue 
+//all async code will get store here.
+example:
+async callback,promise,setimeout,setinterval,fetch code
+===================================================
+
+

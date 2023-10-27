@@ -1,0 +1,40 @@
+Asynchronous:
+//non-blocking operation is supported in javascript.
+//async code will take some time to execute once it is ready then it will be executed.
+//Always synchronous code will be given more priority.
+==================================
+callback:
+Definition:
+passing function as parameter to another function.
+Real Time Usage:
+//To call second async code once first async code is completed.
+==================================================================
+Promise:
+1.promise will return the result inside the then block.
+2.writing promise inside the function.
+example: 
+    return new Promise()
+3.callback function  in new Promise() and inside the then block 
+example:
+     function display(){
+         return new Promise((success)=>{
+ 
+         //async code
+         success(333)
+
+         });
+     }
+     display().then((input)=>{
+         console.log(input);
+         //333
+     })
+====================================
+Event listener is synchronous or asynchronous?
+//Some events are synchronous 
+//some events are asynchronous.
+example for synchronous event 
+1.click 
+2.change 
+example for asynchronous event 
+1.load 
+=====================================
