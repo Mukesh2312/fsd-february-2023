@@ -1,0 +1,63 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Location</th>
+            </tr>
+        </table>
+        <script>
+            let list=[
+                {
+                    fullName:"akash",
+                    age:33,
+                    locations:"bangalore"
+                },
+                {
+                    fullName:"suresh",
+                    age:22,
+                    locations:"delhi"
+                },
+                {
+                    fullName:"harry",
+                    age:15,
+                    locations:"mumbao"
+                }
+            ]
+            let table = document.querySelector('table');
+
+            let result = list.sort((a,b)=>{
+                return a.age-b.age;
+            });
+            
+            for(let obj of result){
+                //1
+                // {
+                // fullName:"akash",
+                //  age:33,
+                //   locations:"bangalore"
+                // }
+            
+            //2
+            //Object.keys(obj)
+            //["fullName","age","locations"]
+
+            //3
+           //["fullName","age","locations"].forEach(input)
+           //obj["fullName"] --> "akash"
+           let tr = document.createElement('tr');
+            Object.keys(obj).forEach((input)=>{
+            let td = document.createElement('td');
+            td.textContent = obj[input];//value
+            tr.appendChild(td);
+            })
+            table.appendChild(tr);
+            }
+           
+        </script>
+    </body>
+</html>

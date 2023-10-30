@@ -2,3 +2,32 @@ call stack:
 1.first preference to synchronouse code.
 2.all codes first will enter to call stack then only to go to callback queue.
 ========================================================
+sorting:
+//sort((a,b)=>{
+    return a-b;
+})
+//it will work only with number in ascending order
+
+//sort((a,b)=>{
+    return b-a;
+})
+//it will work only with number in descending order
+
+//sort()
+//it will sort alphabet in ascending order 
+
+
+//sort().reverse()
+//it will sort alphabet in descending order 
+===================================================
+IPL Table:
+1.array
+2.object 
+3.array method 
+4.iteration 
+5.sync code 
+6.async code 
+7.fetch method 
+8.DOM creation 
+9.rest api call
+===============================================
