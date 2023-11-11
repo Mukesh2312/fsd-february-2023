@@ -1,13 +1,55 @@
-https://my.newtonschool.co/playground/markup/rcco95nsinfe?lecture_hash=2thmar2hdhm9
+<html>
 
+<body>
+    <img>
+    <h1></h1>
+    <h2></h2>
+    <button data-attr="age">Age</button>
+    <button data-attr="email">Email</button>
+    <button data-attr="phone">Phone</button>
+
+    <button onclick="display()" id="getUser">getUser</button>
+</body>
+
+</html>
 <script>
-    async function getRandomUser(){
-    let response = await fetch("https://randomuser.me/api/");
-    let data = await response.json();
-    let firstName = data.results[0] && data.results[0].name && data.results[0].name.first;
-    let lastName = data.results[0] && data.results[0].name && data.results[0].name.last;
-    let fullName = `${firstName} ${lastName}`;
-    console.log(fullName);
+    async function display() {
+        let response = await fetch("https://randomuser.me/api/");
+        let data = await response.json();
+        let firstName = data.results[0].name.first;
+        let lastName = data.results[0].name.last;
+        let fullName = `${firstName} ${lastName}`;
+        let picture = data.results[0].picture.large;
+
+        let email = data.results[0].email;
+        let phone = data.results[0].phone;
+        let age = data.results[0].dob.age;
+      
+        let heading = document.querySelector('h1');
+        heading.innerHTML = fullName
+        let image = document.querySelector('img');
+        image.setAttribute('src', picture);
+
+        let buttonList = document.querySelectorAll('button');
+        let subHeading = document.querySelector('h2');
+        buttonList.forEach(function(btn){
+            btn.addEventListener('click',function(){
+                let attribute = btn.getAttribute('data-attr');
+                subHeading.innerHTML = "";
+                if(attribute == "phone"){
+                  subHeading.innerHTML = phone;
+                }
+                else if(attribute == "email"){
+                    subHeading.innerHTML = email;
+                }
+                else if(attribute == "age"){
+                    subHeading.innerHTML = age;
+                }
+
+            })
+        })
     }
-    getRandomUser();
+    display();
 </script>
+
+<!-- https://my.newtonschool.co/playground/markup/rcco95nsinfe?lecture_hash=2thmar2hdhm9 -->
