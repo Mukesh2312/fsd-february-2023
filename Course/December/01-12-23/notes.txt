@@ -91,3 +91,12 @@ import './app.css';
 Below expression will not display anything in jsx:
 {undefined}{false}{null}{''}
 ==========================================
+Iteration in JSX:
+//we need to use map function 
+//To write javascript {}
+//To write html ()
+//first start with {}
+//for return statement write () 
+//wrapped with <div> tag inside ()
+//always provide index value for key in parent tag
+============================================
