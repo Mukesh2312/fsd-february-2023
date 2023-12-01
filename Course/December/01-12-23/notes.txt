@@ -19,5 +19,72 @@ To check the version of react
 package.json 
 "react": "^18.2.0",
 "react-dom": "^18.2.0"
-
 =================================
+What is component?
+//Component is nothing but a function 
+//function name should be in capital letter 
+//function should return JSX 
+//JSX - javascript extension 
+//JSX is nothing we are written html inside the javascript
+function App(){
+     return <div>Hello</div>
+}
+=========================================
+import/export 
+//we are dividing our code into multiple files 
+example:
+//export statement
+function App(){
+     return <div>Hello</div>
+}
+export default App;
+
+//import statement 
+import App from './filelocation';
+<App/>
+===========================================
+JSX Rules:
+//Always you need to wrapped entire html in "<div></div>" tag 
+//please change css class to "className"
+//To write javascript inside the JSX "{}"
+//To write html inside the javascript "()"
+Things we can write inside the "{}"
+{getAge}
+{condition?true:false}
+{getAge && (<div>hello</div>)}
+==========================================
+useState:
+//To maintain any data dyanmically we need to use state
+example:
+import {useState} from 'react';
+
+function App(){
+    const[getName,setName]=useState('akash');
+
+    const getDisplay=()=>{
+        setName("suresh");
+    }
+
+    return (<div>
+      {getName}
+    </div>)
+}
+==============================================
+How to use Events in reactjs 
+function App(){
+
+    const getDisplay=()=>{
+        setName("suresh");
+    }
+
+    return (<div>
+      <button onClick={getDisplay}>click</button>
+    </div>)
+}
+============================================
+How apply css class 
+//we need to create file with filename.css 
+//we need to import in js file 
+example:
+import './app.css';
+===========================================
