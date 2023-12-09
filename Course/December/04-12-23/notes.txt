@@ -1,0 +1,84 @@
+Custom components 
+//Creating your own components 
+steps:
+1.Any custom components we can create only inside the src folder.
+2.create one new file with extension filename.js 
+3.filename should be in capital letter. 
+4.function name should be same as filename.
+example:
+function Header(){
+    return (<div>
+     <h1>Header component</h1>
+     </div>)
+}
+export default Header;
+5.our main component that is going to render in app.js. Inside the app.js we need to import custom component.
+example:
+import Header from './Header';
+6.
+function App(){
+    return <div>
+     <Header/>
+    </div>
+}
+================================
+props:
+//props is nothing passing properties to custom component 
+//It helps to make component dynamic.
+//props will take only one argument that is called object
+//You can pass multiple properties
+example:
+function Product(props){
+    return <div>{props.name}</div>
+}
+function App(){
+    <Product name="samsung"/>
+}
+===============================
+custom component providing css:
+//create one new file with same as component file with capital extension.css 
+example:
+filename.css 
+//import css file inside the custom component 
+import './Product.css'
+==================================
+What is the use of splitting the component?
+easier to manage
+improve performance
+improve reusability
+=============================================
+Inline style inside the JSX:
+//inline style we need to write inside the object 
+//each style shoulbe in key and value pair 
+//any style with hyphen in between should change to capital letter 
+example:
+style={}
+style={{color:"red"}}
+style={{color:"red",backgroundColor:"blue"}};
+<div style={{color:"red",backgroundColor:"blue"}}></div>
+======================================================
+Writing conditional operator inside the jsx 
+{condition?true:false}
+=====================================================
+useEffect:
+//life cycle hooks
+//every time any state in the depenency array is change it will call the callback function.
+//after the state change it will call callback function 
+//useState is asynchronous. so any change after state you want to make we can use UseEffect().
+//useEffect will get trigger automatically for first render.
+Types of useEffect:
+useEffect(()=>{
+        alert("callback");
+},[getPage]) -->state changes happen
+
+useEffect(()=>{
+        alert("callback");
+},[]) --> it will get trigger only one time during intial rendering
+===============================================================
+api call in reactjs
+//we need to use either fetch method or axios third party package.
+//for api call we can use async await code.
+//api call we should make in useeffect() 
+//api data we need inside the state. 
+========================================================
+
