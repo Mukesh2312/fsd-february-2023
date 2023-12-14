@@ -1,0 +1,40 @@
+https://api.quotable.io/random
+===============================
+Writing Procedure for code 
+1.useState 
+2.useEffect 
+3.function call 
+4.return 
+=================================
+useEffect
+//It will trigger only one time during initial load of the page
+1.useEffect(()=>{
+
+},[])
+//It will trigger everytime whenever there is change in state 
+2.useEffect(()=>{
+
+},[stateDependency])
+=================================
+1.useState 
+2.useEffect 
+3.api call 
+4.input tag value accessing in state 
+5.return jsx
+6.map function with dyanmic 
+======================================
+useEffect  -- two types 
+[]==> it will call callback function one time 
+[state] ==> whenever changes happen it will trigger the callback 
+
+api  call 
+async await 
+fetch method 
+update the state variable
+
+"".split() ==> array 
+map-->bind the data 
+
+
+input --> event.target.value --> {function}
+button -->{()=>function(44)};
