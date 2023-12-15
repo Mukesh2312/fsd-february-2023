@@ -11,7 +11,7 @@ cmd:npx create-react-app project_name
 Source Code to Start: 
 src/App.js 
 To run the project: 
-inside the package.json give right click 
+inside the package.json give right click and give "npm start" 
 =====================================
 Get API Call 
 //we are going to use fetch method from javascript 
@@ -37,5 +37,14 @@ import {useEffect} from 'react';
 
    },[])
 =====================================
-
-
+To Debug Api call in the browser 
+//right click --> inspect --> network tab --> XHR 
+Inside Headers: 
+//Request URL: -> verify your url
+//Status Code: -> check for 200 
+Inside Response 
+//check data is coming or not 
+==================================
+second api call:
+https://content.newtonschool.co/v1/pr/64cc0d779d08d5aa491c7160/pokemons1
+==============================
