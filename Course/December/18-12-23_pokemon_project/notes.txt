@@ -1,0 +1,51 @@
+Pokemon Project:
+1.Api Data from backend 
+2.Load More button bring new 20 data from backend 
+3.inside the card button pop will open will get detailed data.
+===================================================
+Creating New Project:
+//npx create-react-app project_name 
+To Run the project:
+right click package.json --> npm start 
+Main source file for code 
+App.js 
+Remove strict mode in index.js
+<React.StrictMode>
+=======================================
+Calling API in first load of the page:
+
+  const getAllPokemon= async ()=>{
+     try{
+       let response = await fetch('https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1');
+       let data = await response.json();
+       console.log(data[0].results);
+     }catch(err){
+      console.log(err);
+     }
+  }
+
+  useEffect(()=>{
+    getAllPokemon();
+  },[])
+============================================================
+Handling multiple api call one after the other 
+//Multiple api will be given in array ["http://newtonschool.com/1","http://newtonschool.com/2","http://newtonschool.com/3"]
+//loop for await() 
+example:
+let list = ["http://newtonschool.com/1","http://newtonschool.com/2","http://newtonschool.com/3"];
+for await(let obj of list){
+    let response = await fetch(obj);
+    let dataq = await response.json();
+}
+=================================================
+useState:
+//All api data should be inserted inside the useState.
+==================================================
+Using map function:
+const [getList,setList] = useState([]);
+ {getList.map((obj)=>{
+           return (<>
+             <h1>HELLO</h1>
+           </>)
+      })}
+===================================================
