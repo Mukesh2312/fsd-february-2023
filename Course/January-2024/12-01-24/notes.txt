@@ -15,22 +15,79 @@
     url:https://academics.newtonschool.co/api/v1/music/album?limit=50
     headers:
     projectId:f104bi07c490
-    params:
+    query params:
     ?limit=100
     ======================================================
     list of songs api: //How to filter data
     url: https://academics.newtonschool.co/api/v1/music/song?filter={"mood":"romantic"}
     headers:
     projectId:f104bi07c490
-    params:
+    query params:
     ?filter={"mood":"romantic"}
     ==================================================================
     list of songs api: //How to sort the data 
     url:https://academics.newtonschool.co/api/v1/music/song?sort={"release":1}
     headers:
     projectId:f104bi07c490
-    params:
+    query params:
     ?sort={"release":1}
     ascending order: 1
     descending order: -1
     =========================================================================
+    list of songs api: //Page+limit 
+    https://academics.newtonschool.co/api/v1/music/song?page=2&limit=10
+    headers:
+    projectId:f104bi07c490
+    query params:
+    ?&page=2&limit=10
+    ================================================================= 
+    list of music api: //path params //dynamic url
+    url:https://academics.newtonschool.co/api/v1/music/album/:id
+    headers:
+   'projectId': 'YOUR_PROJECT_ID'
+    path params:
+    :id
+    =======================================================================
+    Current Topics:
+    1.postman 
+    2.get method 
+    3.headers
+    4.query params 
+       //It is optional data start with question mark
+       example:https://academics.newtonschool.co/api/v1/music/song?page=2&limit=10
+
+    5.path params 
+       //It is mandatory data you will find with /:id
+       example: url:https://academics.newtonschool.co/api/v1/music/album/232323
+    ===================================================================
+    Sign up:
+    fetch('https://academics.newtonschool.co/api/v1/user/signup', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        name: 'user_name',
+        email: 'user_email',
+        password: 'user_password',
+        appType: 'music',
+    })
+   })
+
+   url:https://academics.newtonschool.co/api/v1/user/signup
+   method:'POST'
+   headers
+   Content-Type : application/json
+   projectId:f104bi07c490
+   BODY: 
+     {
+        "name": "salman3009",
+        "email": "salman444@gmail.com",
+        "password": "12345",
+        "appType": "music"
+    }
+   //For sending body:
+   //body-->raw-->json
+   //always pass unique email
+
+=====================================================================
