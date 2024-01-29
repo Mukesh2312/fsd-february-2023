@@ -1,5 +1,43 @@
 email:"rakesh@gmail.com"
 password: "12345"
-
+application url:https://learn.newtonschool.co/n/lolht6773qin/preview
 =================================================================
 How to add songs inside the favorite?
+================================================
+http methods
+1.get - getting data - there is no body
+2.post -(new data) sending data  - there is body
+3.patch - (update purpose ) sending data - there is body
+=================================================
+JWT Token - json web token 
+//Every login will have unique token 
+//It consists of details regarding the current user. But everything is encrypted 
+//Once you like the songs or remove songs it will store in that particular user.
+=====================================================================
+music audio tag:
+https://code.newtonschool.co/newton-box/xsz3ajo67i9y/
+//using useRef to access current tag of audio 
+//useRef will give direct access to the tag similar to DOM manipulation 
+//useRef have 'current' property with that we can access play() and pause() functionality
+//we can use audio tag with src given in the api 
+ <audio ref={audioRef} src="https://newton-project-resume-backend.s3.amazonaws.com/audio/64cf908947ae38c3e33a1994.mp3"/>
+==========================================================
+functionality:
+1.functional component 
+2.how to setup routing 
+3.useState,useEffect,useRef 
+4.protected routes 
+5.api call - get ,post,patch 
+6.api call - using params 
+7.api call - using headers 
+8.api call - using headers with token 
+9.audio system added 
+10.provider and consumer 
+11.authentication 
+12.authorization 
+13.form handling 
+14.navbar conditional handling(login,logout)
+15.display music
+16.filtering
+17.search 
+=======================================================
